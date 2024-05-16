@@ -68,13 +68,13 @@ function ResumePage() {
   ];
   return (
     <Sidebar>
-      <section className="flex flex-wrap my-5 " id="remus">
-        <div className=" my-5">
+      <section className="flex items-center justify-center flex-wrap my-5 " id="remus">
+        <div className=" my-5  mx-5 md:mx-0">
           <h1 className=" font-semibold text-3xl">Resume</h1>
-          <div className=" grid grid-cols-1 lg:gap-10 lg:grid-cols-2">
+          <div className=" grid grid-cols-1  lg:gap-10 lg:grid-cols-2">
             <div>
               <div className=" my-5">
-                <h1 className=" font-semibold text-base mb-5">Education</h1>
+                <h1 className=" font-semibold  text-base mb-5">Education</h1>
                 {educations.map((education, i) => (
                   <Education education={education} key={i} />
                 ))}

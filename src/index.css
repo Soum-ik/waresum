@@ -1,0 +1,59 @@
+
+.resume_container{
+  grid-template-columns: repeat(2, 2fr);
+  column-gap: 3.75rem;
+}
+.resume_titel,
+.skill_titel {
+  margin-bottom: 2.8em;
+  letter-spacing: .4em;
+  font-size: var(--text-color-alt);
+  color: var(--text-color-alt);
+}
+.resume_item{
+  border-left: 2px solid rgb(40, 30, 30);
+  padding-left: 1.6rem;
+  position: relative;
+}
+.resume_item:not(:last-child){
+  padding-bottom: 3rem;
+}
+.resume_item::before{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  /* border: 2px solid rgb(71, 71, 71); */
+  left:  -0.57rem;
+  background-color: white;
+  border: 2px solid #04B4E0;
+}
+.resmuse_subtitel{
+  color:  var(--text-color);
+  margin-bottom: 10px;
+}
+.resume_data{
+  margin-bottom: 20px;
+  /* color: #999999;     */
+}
+
+.resume_description {
+  margin-top: 20px;
+  color:  var(--text-color);      
+}
+
+
+.container{
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: .9rem;
+  padding-right: 0.9rem;
+}
+ 
+
+.section{
+  padding-top: 3.75rem;
+  padding-bottom: 3.7rem;
+  /* background-color: red; */
+}

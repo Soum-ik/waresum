@@ -11,7 +11,7 @@ function Education({ education }) {
         ) : (
           <h1 className="font-semibold">{education.startYear}</h1>
         )}
-        <p className="text-black/40">{education.university}</p>
+        <p className="text-black/40 text-xs">{education.university}</p>
       </div>
 
       <div className=" flex flex-col items-center">

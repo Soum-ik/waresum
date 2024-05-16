@@ -36,7 +36,7 @@ function PortfolioPage() {
           <div className="flex gap-5 mt-5">
             {item.map((itemName, i) => (
               <h1
-                className={`text-xs cursor-pointer select-none ${
+                className={`text-sm cursor-pointer select-none ${
                   selectedItem === itemName ? "text-blue-500" : ""
                 }`}
                 key={i}

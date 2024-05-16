@@ -1,148 +1,74 @@
- 
+import { BiLocationPlus, BiPhone } from "react-icons/bi";
 import Sidebar from "../sidebar";
+import { BsMailbox } from "react-icons/bs";
+import { RiGhost2Fill } from "react-icons/ri";
 function ContactPage() {
+  const contactDetails = [
+    { id: 1, icon: <BiLocationPlus size={30} />, name: "San Francisco" },
+    { id: 2, icon: <BiPhone size={30} />, name: "415-832-2000    " },
+    { id: 3, icon: <BsMailbox size={30} />, name: "[email protected]" },
+    {
+      id: 4,
+      icon: <RiGhost2Fill size={30} />,
+      name: "Freelance Available    ",
+    },
+  ];
+
   return (
     <Sidebar>
-      <>
-        {/* component */}
-        <div className="  bg-gray-100">
-          <div className="p-6 mr-2 bg-gray-100 dark:bg-gray-800 sm:rounded-lg">
-            <h1 className="text-4xl sm:text-5xl text-gray-800 dark:text-white font-extrabold tracking-tight">
-              Get in touch
-            </h1>
-            <p className="text-normal text-lg sm:text-2xl font-medium text-gray-600 dark:text-gray-400 mt-2">
-              Fill in the form to start a conversation
-            </p>
-            <div className="  flex ">
-             <div>
-                <div className="flex items-center mt-8 text-gray-600 dark:text-gray-400">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                    viewBox="0 0 24 24"
-                    className="w-8 h-8 text-gray-500"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="1.5"
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="1.5"
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                  <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                    Acme Inc, Street, State, Postal Code
-                  </div>
+      <div className=" mx-5 lg:mx-0  flex flex-wrap my-5">
+        <div className="my-5">
+          <h1 className="font-semibold text-3xl">Contact</h1>
+          <div className=" flex justify-between  flex-col lg:flex-row gap-5 mt-10 ">
+            <div className=" space-y-5 ">
+              {contactDetails.map((item) => (
+                <div
+                  className=" w-60 py-5 gap-3 border flex items-center justify-center flex-col   "
+                  key={item.id}
+                >
+                  <h1 className=" text-primary">{item.icon}</h1>
+                  <h1 className=" font-medium">{item.name}</h1>
                 </div>
-                <div className="flex items-center mt-4 text-gray-600 dark:text-gray-400">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                    viewBox="0 0 24 24"
-                    className="w-8 h-8 text-gray-500"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="1.5"
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
-                  <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                    +44 1234567890
-                  </div>
-                </div>
-                <div className="flex items-center mt-2 text-gray-600 dark:text-gray-400">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                    viewBox="0 0 24 24"
-                    className="w-8 h-8 text-gray-500"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="1.5"
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                    info@acme.org
-                  </div>
-                </div>
-             </div>
-            
+              ))}
+            </div>
+            <div className="">
+              <div className="w-[50%] ">
+                <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                  <a href="https://www.gps.ie/">gps trackers</a>
+                </iframe>
+              </div>
+              <h1 className=" font-semibold mt-10">
+                How Can <span className=" text-primary">I Help You?</span>
+              </h1>
+              <div className=" grid my-5 gap-4">
+                <input
+                  placeholder="Full Name"
+                  className=" min-w-[300px] md:min-w-[400px] border  px-4 rounded-lg select-none py-2"
+                  type="text"
+                />
+                <input
+                  placeholder="Email Address"
+                  className=" min-w-[300px] md:min-w-[400px] border  px-4 rounded-lg select-none py-2"
+                  type="text"
+                />
+                <input
+                  placeholder="Subject"
+                  className=" min-w-[300px] md:min-w-[400px] border  px-4 rounded-lg select-none py-2"
+                  type="text"
+                />
+                <textarea
+                  placeholder="Message"
+                  className=" min-w-[300px] md:min-w-[400px] border  px-4 rounded-lg select-none py-2"
+                  type="text"
+                />
+              </div>
             </div>
           </div>
-          <form className="p-6 flex flex-col justify-center">
-            <div className="flex flex-col">
-              <label htmlFor="name" className="hidden">
-                Full Name
-              </label>
-              <input
-                type="name"
-                name="name"
-                id="name"
-                placeholder="Full Name"
-                className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
-              />
-            </div>
-            <div className="flex flex-col mt-2">
-              <label htmlFor="email" className="hidden">
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email"
-                className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
-              />
-            </div>
-            <div className="flex flex-col mt-2">
-              <label htmlFor="tel" className="hidden">
-                Number
-              </label>
-              <input
-                type="tel"
-                name="tel"
-                id="tel"
-                placeholder="Telephone Number"
-                className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
-              />
-            </div>
-            <div className="flex flex-col mt-2">
-              <label htmlFor="tel" className="hidden">
-                Number
-              </label>
-            <textarea name=""  id=""
-                            className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
-
-            ></textarea>
-            </div>
-            <button
-              type="submit"
-               className="shadow-md border rounded-3xl mt-5 inline-block   px-5 text-lg text-white  bg-[#04B4E0] max-w-max py-2 transition-all duration-500"
-               >
-              Submit
-            </button>
-          </form>
+          <button className=" text-center shadow-md border rounded-3xl mt-5 inline-block text-primary  px-5 text-lg hover:bg-primary hover:text-white py-2 transition-all duration-500">
+            Submit Now
+          </button>
         </div>
-      </>
+      </div>
     </Sidebar>
   );
 }
